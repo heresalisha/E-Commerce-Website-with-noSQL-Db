@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Add Product</title>
+        <link rel="stylesheet" href="img.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+                .bu{
+                        display: inline-block;
+                        background: #0000b3;
+                        
+                        border-radius: 30px;
+                    }
+        </style>
+        <script>
+            function img_ret()
+            {  
+                var aa;
+                var input=document.getElementById("inputFile");
+                var fReader=new FileReader();
+                fReader.readAsDataURL(input.files[0]);
+                fReader.onloadend = function(event){
+                    var img=document.getElementById("urimg");
+                    aa=event.target.result;
+                    img.src=aa;
+                  document.getElementById("img1").value=aa;   
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <form action="add_product.jsp" method="POST">
+            <div class="form-left-decoration"></div>
+            <div class="form-right-decoration"></div>
+            <div class="circle"></div>
+            <div class="form-inner">
+                <h1>Add Product Details</h1><br>
+            <input type="text" id="t2" name="t12" placeholder="Enter Product Name"><br>
+            <input type="number" id="t3" name="t13" placeholder="Enter Product Price"><br>
+            <input type="file" id="inputFile" name="image1" onchange="img_ret()"><br>
+            <img src="" id="urimg" alt="Image not selected yet...!!" width="150" height="150"><br><br>
+            <textarea id="img1" name="img11" rows="5" placeholder="base64 code..."></textarea><br>
+            <input type="submit" class="bu" name="save" value="SAVE"></div>
+        </form>
+    </body>
+</html>

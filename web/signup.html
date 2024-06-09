@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+      <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="images/logo.jpg" alt="" width="45px" />
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="img_display.jsp">Products</a></li>
+              <li><a href="">Sign Up</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+
+<!-----account page----->
+
+<div class="account-page">
+   <div class="container">
+      <div class="row">
+         <div class="col-2">
+            <img src="images/model1.png" width="100%">
+         </div>
+         <div class="col-2">
+            <div class="form-container">
+               <div class="form-btn">
+                  <span>Register</span>
+                  <hr id="Indicator">
+               </div>
+                <form action="signup.jsp" method="post">
+                  <input type="text" name="name" placeholder="Full Name">
+                  <input type="text" name="user_name" placeholder="Username">
+                  <input type="email" name="email" placeholder="Email">
+                  <input type="password" name="password" placeholder="Password">
+                  <button type="submit" class="btn">Register</button>
+                  <a href="login.html"><b>Click here to login...!</b></a>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!----------footer------------>
+<footer class="section-p1">
+        <div class="col">
+            <img src="img/logo2.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Panvel,Navi Mumbai,Maharashtra, India</p>
+            <p><strong>Phone:</strong> +91(7304215677)</p>
+            <p><strong>Lat/Long:</strong> 18°59'N / 73°07'E</p>
+        
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+            <i class="uil uil-instagram"></i>
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-whatsapp"></i>
+        </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="">Sign Up</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Term & Condition</a>
+        <a href="">Contact Us</a>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="">Sign In</a>
+        <a href="">View Cart</a>
+        <a href="">My Wishlist</a>
+        <a href="">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>Download App from Apple Store or Google Store </p>
+        <div class="row">
+            <img src="images/app.jpg" alt="">
+            <img src="images/play.jpg" alt="">
+           </div>
+                <p>Secure Follow link</p>
+            <img src="images/pay.png" alt="">
+    </div>
+    <div class="copyright">
+        <p> &#169; 2022 Ambex Wearable & Hearable Brand</p>
+    </div>
+</footer>
+   <!------------js for toggle menu---------->
+   <script type="text/javascript">
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle(){
+         if(MenuItems.style.maxHeight == "0px")
+         {
+            MenuItems.style.maxHeight = "200px";
+         }
+         else
+         {
+            MenuItems.style.maxHeight = "0px";
+         }
+      }
+   </script>
+
